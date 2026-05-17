@@ -1,0 +1,137 @@
+{
+  "experiment_info": {
+    "title": "SmartSplit Bill AI — Model Comparison",
+    "bill_images": [
+      "../sample_bills/nota_1.jpg",
+      "../sample_bills/nota_2.jpg"
+    ],
+    "models_tested": [
+      "gemini-2.5-flash",
+      "qwen2-vl-2b-instruct"
+    ],
+    "selected_model": "gemini-2.5-flash",
+    "selection_reason": "Faster inference, higher accuracy, consistent JSON output, easy setup"
+  },
+  "gemini_results": {
+    "0": {
+      "items": [
+        {
+          "name": "Fried Kwetiau",
+          "quantity": 1,
+          "price_per_item": 99000,
+          "total_price": 99000
+        },
+        {
+          "name": "Spicy Lv 1",
+          "quantity": 1,
+          "price_per_item": 1000,
+          "total_price": 1000
+        },
+        {
+          "name": "Orange Juice",
+          "quantity": 1,
+          "price_per_item": 50000,
+          "total_price": 50000
+        },
+        {
+          "name": "Avocado Juice",
+          "quantity": 1,
+          "price_per_item": 50000,
+          "total_price": 50000
+        }
+      ],
+      "subtotal": 200000,
+      "additional_charges": [
+        {
+          "name": "Discount",
+          "amount": -30000
+        },
+        {
+          "name": "Service",
+          "amount": 12750
+        },
+        {
+          "name": "PB1",
+          "amount": 18275
+        }
+      ],
+      "total": 201025,
+      "currency": "IDR",
+      "inference_time": 10.89,
+      "model": "gemini-2.5-flash",
+      "parse_success": true
+    },
+    "1": {
+      "items": [
+        {
+          "name": "SR TWR SPC",
+          "quantity": 1,
+          "price_per_item": 15000,
+          "total_price": 15000
+        },
+        {
+          "name": "KP BRD L 0.020",
+          "quantity": 1,
+          "price_per_item": 500,
+          "total_price": 500
+        },
+        {
+          "name": "ALFA SL STR150G",
+          "quantity": 1,
+          "price_per_item": 13500,
+          "total_price": 13500
+        },
+        {
+          "name": "GD 3IN1 MOC 10S",
+          "quantity": 1,
+          "price_per_item": 18700,
+          "total_price": 18700
+        },
+        {
+          "name": "Disc.",
+          "quantity": 1,
+          "price_per_item": -1800,
+          "total_price": -1800
+        },
+        {
+          "name": "GADDJAH TBRK138G",
+          "quantity": 1,
+          "price_per_item": 21800,
+          "total_price": 21800
+        }
+      ],
+      "subtotal": 67700,
+      "additional_charges": [
+        {
+          "name": "PPN",
+          "amount": 6868
+        }
+      ],
+      "total": 74568,
+      "currency": "IDR",
+      "inference_time": 15.13,
+      "model": "gemini-2.5-flash",
+      "parse_success": true
+    }
+  },
+  "qwen_results": {
+    "0": {
+      "inference_time": 56.47,
+      "model": "qwen2-vl-2b-instruct",
+      "parse_success": false,
+      "error": "Extra data: line 5 column 5 (char 75)"
+    },
+    "1": {
+      "inference_time": 71.04,
+      "model": "qwen2-vl-2b-instruct",
+      "parse_success": false,
+      "error": "Extra data: line 5 column 5 (char 75)"
+    }
+  },
+  "performance_summary": {
+    "gemini_avg_time": 13.01,
+    "qwen_avg_time": 63.76,
+    "gemini_parse_success_rate": "2/2",
+    "qwen_parse_success_rate": "0/2"
+  }
+}
